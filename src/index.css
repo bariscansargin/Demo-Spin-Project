@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 
-#root {
-  @apply h-screen bg-gradient-to-r from-yellow-200 via-green-200 to-green-300
+#root,body,html {
+  @apply bg-gradient-to-r from-yellow-200 via-green-200 to-green-300
 }
