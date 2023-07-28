@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 //Components
 import LoaderSpinner from "./LoaderSpinner";
+import ConfettiComponent from "./Confetti";
 // Spin Package
 import SpinAndWin from "react-spin-game";
 import "react-spin-game/dist/index.css";
@@ -17,8 +18,9 @@ const GiftWheel = () => {
   const [prize, setPrize] = useState("");
   const buttonRef = useRef(null);
 
-  useEffect(()=> {},[])
   useEffect(() => {
+    //Set Prize List
+    if (spinList.length > 0) return;
     const prizeList = setList(prizes);
     setTimeout(() => {
       setSpinList(prizeList);
@@ -26,7 +28,6 @@ const GiftWheel = () => {
   }, []);
 
   const selectPrize = async () => {
-    
     const drawnPrize = drawPrize(prizes);
 
     if (!drawnPrize) {
@@ -70,9 +71,12 @@ const GiftWheel = () => {
               SPIN
             </button>
           ) : (
-            <p className="mt-4 text-slate-900 font-bold text-xl italic">
-              Next Spin Chance : {calculateNextSpin()}
-            </p>
+            <>
+              <p className="mt-4 text-slate-900 font-bold text-xl italic">
+                Next Spin Chance : {calculateNextSpin()}
+              </p>
+              <ConfettiComponent />
+            </>
           )}
         </>
       ) : (
