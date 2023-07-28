@@ -6,6 +6,6 @@ export const calculateNextSpin = () => {
   const month = String(fiveDaysAhead.getMonth() + 1).padStart(2, "0");
   const day = String(fiveDaysAhead.getDate()).padStart(2, "0");
 
-  const formattedDate = `${day}-${month}-${year}`;
+  const formattedDate = `${day}.${month}.${year}`;
   return formattedDate;
 };
