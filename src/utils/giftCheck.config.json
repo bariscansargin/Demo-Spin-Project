@@ -2,7 +2,7 @@
   "checkPrizes": [
     {
       "id": 1,
-      "title": "20 TL discount on Trendyol.",
+      "title": "20 TL discount on Trendyol",
       "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Trendyol_online.png/1200px-Trendyol_online.png",
       "possibility": 0.3
     },
@@ -30,7 +30,7 @@
       "id": 5,
       "title": "30% discount on Cambly",
       "photo": "https://w1.pngwing.com/pngs/880/1007/png-transparent-education-education-learning-english-language-logo-cambly-inc-line-computer-program.png",
-      "possibility": 0.11
+      "possibility": 0.1
     }
   ]
 }

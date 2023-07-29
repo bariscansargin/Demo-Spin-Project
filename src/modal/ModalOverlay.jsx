@@ -15,8 +15,8 @@ const ModalOverlay = ({ prize, closeHandler }) => {
     }
   }, []);
   return (
-    <div className="fixed top-1/3 left-20 z-20 min-w-[70%] bg-white rounded-lg shadow-lg shadow-slate-500 flex flex-col">
-      <header className="bg-slate-700 p-3">
+    <div className="fixed top-1/2 left-1/2 transform translate-x-[-50%] translate-y-[-50%] z-20 min-w-[80%] min-[600px]:min-w-[50%] bg-white rounded-2xl shadow-lg shadow-slate-500 flex flex-col">
+      <header className="bg-slate-800 p-3">
         <h1 className="text-white text-3xl bold tracking-wide text-center">
           Congratulations
         </h1>

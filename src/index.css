@@ -21,6 +21,10 @@ html {
   flex-direction: column;
   align-items: center;
   min-width: max-content;
-
   min-height: 100vh;
+}
+
+.index-module_canvas__H2w7d {
+  width: 0px !important;
+  height: 0px !important;
 }
