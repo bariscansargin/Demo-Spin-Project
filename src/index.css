@@ -5,6 +5,15 @@
 body {
   @apply bg-gradient-to-r from-yellow-200 via-green-200 to-green-300;
 }
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+#root {
+  @apply min-[382px]:pt-0;
+}
 body,
 html {
   margin: 0;
@@ -12,6 +21,6 @@ html {
   flex-direction: column;
   align-items: center;
   min-width: max-content;
-  
+
   min-height: 100vh;
 }
