@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 //Components
 
 import ConfettiComponent from "./Confetti";
-import InformationModal from "../modals/InformationModal";
+import InformationModal from "../modal/InformationModal";
 // Spin Package
 import SpinAndWin from "react-spin-game";
 
@@ -17,6 +17,7 @@ const GiftWheel = () => {
   const [spinList, setSpinList] = useState([]);
   const [isSpinning, setIsSpinning] = useState(false);
   const [informationIsOpen, setInformationIsOpen] = useState(false);
+  const [prizeObj, setPrizeObj] = useState("");
   const [prize, setPrize] = useState("");
   const buttonRef = useRef(null);
 
@@ -33,7 +34,7 @@ const GiftWheel = () => {
     if (!drawnPrize) {
       return Promise.reject(new Error("Prize not found."));
     }
-
+    setPrizeObj(drawnPrize);
     setPrize(drawnPrize.title);
 
     await new Promise((resolve) => {
@@ -47,12 +48,12 @@ const GiftWheel = () => {
     buttonRef.current.handleSpin();
     setTimeout(() => {
       setIsSpinning(false);
-      setInformationIsOpen(true)
+      setInformationIsOpen(true);
     }, 4000);
   };
-  const informationCloseHandler = () =>  {
-    setInformationIsOpen(false)
-  }
+  const informationCloseHandler = () => {
+    setInformationIsOpen(false);
+  };
   return (
     <div>
       {spinList.length > 0}
@@ -83,7 +84,12 @@ const GiftWheel = () => {
           <ConfettiComponent />
         </>
       )}
-      {informationIsOpen && <InformationModal prize={prize} informationCloseHandler={informationCloseHandler}  />}
+      {informationIsOpen && (
+        <InformationModal
+          prize={prizeObj}
+          informationCloseHandler={informationCloseHandler}
+        />
+      )}
     </div>
   );
 };
