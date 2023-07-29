@@ -1,0 +1,36 @@
+{
+  "checkPrizes": [
+    {
+      "id": 1,
+      "title": "20 TL discount on Trendyol.",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Trendyol_online.png/1200px-Trendyol_online.png",
+      "possibility": 0.3
+    },
+    {
+      "id": 2,
+      "title": "30 tl discount on Adidas",
+      "photo": "https://w7.pngwing.com/pngs/403/367/png-transparent-adidas-logo-adidas-logo-cdr-angle-text.png",
+      "possibility": 0.2  
+    },
+    {
+      "id": 3,
+      "title": "10 tl discount on Nike",
+      "photo": "https://w7.pngwing.com/pngs/224/696/png-transparent-nike-logo-movement-brands-black-thumbnail.png",
+      "possibility": 0.3
+    },
+
+    {
+      "id": 4,
+      "title": "50 tl discount on Hepsiburada",
+      "photo": "https://www.ideasoft.com.tr/wp-content/uploads/2022/05/Hepsiburada-Logo-Transparan.png",
+      "possibility": 0.1
+    },
+
+    {
+      "id": 5,
+      "title": "30% discount on Cambly",
+      "photo": "https://w1.pngwing.com/pngs/880/1007/png-transparent-education-education-learning-english-language-logo-cambly-inc-line-computer-program.png",
+      "possibility": 0.11
+    }
+  ]
+}
