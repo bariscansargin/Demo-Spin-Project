@@ -13,7 +13,7 @@
     "react": "^18.2.0",
     "react-confetti-explosion": "^2.1.2",
     "react-dom": "^18.2.0",
-    "react-spin-game": "^1.0.7"
+    "react-spin-game": "github:bariscansargin/react-spin-game"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
