@@ -64,7 +64,7 @@ const GiftWheel = () => {
           horizantalText={false}
           ref={buttonRef}
           hideButton={true}
-          fontFamily="fantasy"
+          
         />
         {!isSpinning && prize.trim().length === 0 ? (
           <>
