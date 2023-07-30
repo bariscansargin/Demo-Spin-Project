@@ -2,14 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-  @apply bg-gradient-to-r from-yellow-200 via-green-200 to-green-300;
+  @apply bg-gradient-to-r from-red-700 to-red-800
+
 }
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+ 
 }
 #root {
   @apply min-[382px]:pt-0;
@@ -27,4 +30,11 @@ html {
 .index-module_canvas__H2w7d {
   width: 0px !important;
   height: 0px !important;
+}
+
+._28Wol {
+  background-color: white !important;
+}
+._1E7u3 {
+  margin: 25px !important;
 }
