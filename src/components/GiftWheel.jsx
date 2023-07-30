@@ -1,17 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 //Components
-import ConfettiExplosion from "react-confetti-explosion";
 import InformationModal from "../modal/InformationModal";
+import ConfettiComponent from "./Confetti";
 // Spin Package
 import SpinAndWin from "react-spin-game";
-
 // Config
 import { prizes } from "../utils/prizes.config.json";
 //Utils
 import { setList } from "../utils/spinner-functions";
 import { drawPrize } from "../utils/spinner-functions";
 import { calculateNextSpin } from "../utils/date-functions";
-import ConfettiComponent from "./Confetti";
 
 const GiftWheel = () => {
   const [spinList, setSpinList] = useState([]);
@@ -83,8 +81,6 @@ const GiftWheel = () => {
             <p className="mt-8 text-white font-extrabold text-2xl">
               Next Spin Chance : {calculateNextSpin()}
             </p>
-
-            {/* <ConfettiComponent /> */}
           </>
         )}
         {informationIsOpen && (

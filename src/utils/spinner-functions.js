@@ -14,6 +14,7 @@ export function drawPrize(prizes) {
     return total;
   }, 0);
   const roundedPossibility = Math.floor(totalPossibility);
+ 
   if (roundedPossibility !== 1) {
     console.log(
       "Total Possibility = " + totalPossibility,
