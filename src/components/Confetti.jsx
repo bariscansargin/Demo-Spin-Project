@@ -11,7 +11,7 @@ const ConfettiComponent = () => {
       width={1000}
       particleSize={6}
       particleCount={40}
-    ></ConfettiExplosion>
+    />
   );
 };
 
