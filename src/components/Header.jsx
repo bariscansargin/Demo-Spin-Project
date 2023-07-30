@@ -1,5 +1,5 @@
 import React from "react";
-
+import photo from "../assets/logo.png";
 const Header = () => {
   return (
     <header className="flex flex-col items-center justify-center p-4 mt-2  gap-y-8 gap-x-12 mb-20 min-[382px]:pt-0 sm:mb-4 min-[380px]:mb-4 min-[465px]:flex-row xl:mt-6 xl:mb-12 ">
@@ -7,7 +7,7 @@ const Header = () => {
         GIFT WHEEL
       </h1>
 
-      <img src="../src/assets/logo.png" alt="logo" className="w-32 h-18 sm:w-24 h-16 lg:w-32 h-18" />
+      <img src={photo} alt="logo" className="w-32 h-18 sm:w-24 h-16 lg:w-32 h-18" />
     </header>
   );
 };
