@@ -17,7 +17,7 @@ const GiftWheel = () => {
   const [spinList, setSpinList] = useState([]);
   const [isSpinning, setIsSpinning] = useState(false);
   const [informationIsOpen, setInformationIsOpen] = useState(false);
-  const [prizeObj, setPrizeObj] = useState("");
+  const [prizeObj, setPrizeObj] = useState(null);
   const [prize, setPrize] = useState("");
   const buttonRef = useRef(null);
 
@@ -69,7 +69,7 @@ const GiftWheel = () => {
       {!isSpinning && prize.trim().length === 0 ? (
         <>
           <button
-            className=" bg-blue-600 hover:bg-blue-400 hover:text-black  p-2 mt-2 rounded-lg text-white shadow-lg text-md font-bold transition-all duration-300 ease-out"
+            className=" bg-white text-red-800 p-2 mt-2 rounded-lg shadow-lg text-md font-bold transition-all duration-300 ease-out"
             onClick={spinHandler}
             disabled={isSpinning}
           >
@@ -78,7 +78,7 @@ const GiftWheel = () => {
         </>
       ) : (
         <>
-          <p className="mt-8 text-slate-900 font-bold text-2xl">
+          <p className="mt-8 text-white font-extrabold text-2xl">
             Next Spin Chance : {calculateNextSpin()}
           </p>
           <ConfettiComponent />
