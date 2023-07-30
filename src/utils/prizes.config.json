@@ -1,19 +1,19 @@
 {
   "prizes": [
-    { "id": 1, "title": "1 GB Internet", "possibility": 0.03, "color": "red" }, 
+    { "id": 1, "title": "1 GB Internet", "possibility": 0.03, "color": "blue" }, 
     { "id": 2, "title": "Gift Check", "possibility": 0.2, "color": "green" }, 
-    { "id": 3, "title": "3 GB Internet", "possibility": 0.03, "color": "red" }, 
-    { "id": 4, "title": "250 SMS", "possibility": 0.3, "color": "blue" },
-    { "id": 5, "title": "5 GB Internet", "possibility": 0.02, "color": "red" }, 
+    { "id": 3, "title": "3 GB Internet", "possibility": 0.03, "color": "orange" }, 
+    { "id": 4, "title": "250 SMS", "possibility": 0.3, "color": "#0D1282" },
+    { "id": 5, "title": "5 GB Internet", "possibility": 0.02, "color": "#0B666A" }, 
     {
       "id": 6,
       "title": "50 Min Talk Time",
       "possibility": 0.2,
-      "color": "black"
+      "color": "#3F2E3E"
     },
     { "id": 7, "title": "10 GB Internet", "possibility": 0.02, "color": "red" }, 
 
-    { "id": 8, "title": "Gift Check", "possibility": 0.2, "color": "green" }
+    { "id": 8, "title": "Gift Check", "possibility": 0.2, "color": "#8062D6" }
   ]
 }
 
