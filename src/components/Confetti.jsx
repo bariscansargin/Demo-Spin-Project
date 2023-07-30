@@ -1,20 +1,17 @@
-import Confetti from "react-confetti-boom";
+import ConfettiExplosion from "react-confetti-explosion";
 
 import React from "react";
 
 const ConfettiComponent = () => {
+  console.log("Confetti boom");
   return (
-    <Confetti
-      x={0.5}
-      y={0.3}
-      particleCount={200}
-      deg={270}
-      shapeSize={8}
-      spreadDeg={45}
-      effectInterval={2000}
-      effectCount={10}
-      colors={["#ff577f", "#ff884b", "#ffd384", "#fff9b0", "#3498db"]}
-    />
+    <ConfettiExplosion
+      colors={["#FFC700", "#FF0000", "#2E3191", "#41BBC7"]}
+      height={"100vh"}
+      width={1000}
+      particleSize={6}
+      particleCount={40}
+    ></ConfettiExplosion>
   );
 };
 

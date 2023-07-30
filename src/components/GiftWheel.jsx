@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 //Components
-
-import ConfettiComponent from "./Confetti";
+import ConfettiExplosion from "react-confetti-explosion";
 import InformationModal from "../modal/InformationModal";
 // Spin Package
 import SpinAndWin from "react-spin-game";
@@ -12,6 +11,7 @@ import { prizes } from "../utils/prizes.config.json";
 import { setList } from "../utils/spinner-functions";
 import { drawPrize } from "../utils/spinner-functions";
 import { calculateNextSpin } from "../utils/date-functions";
+import ConfettiComponent from "./Confetti";
 
 const GiftWheel = () => {
   const [spinList, setSpinList] = useState([]);
@@ -55,42 +55,46 @@ const GiftWheel = () => {
     setInformationIsOpen(false);
   };
   return (
-    <div>
-      {spinList.length > 0}
-      <SpinAndWin
-        data={spinList}
-        result={prize}
-        fontSize={23}
-        horizantalText={false}
-        ref={buttonRef}
-        hideButton={true}
-        fontFamily="fantasy"
-      />
-      {!isSpinning && prize.trim().length === 0 ? (
-        <>
-          <button
-            className=" bg-white text-red-800 p-2 mt-6 rounded-lg shadow-lg text-md font-bold transition-all duration-300 ease-out"
-            onClick={spinHandler}
-            disabled={isSpinning}
-          >
-            SPIN
-          </button>
-        </>
-      ) : (
-        <>
-          <p className="mt-8 text-white font-extrabold text-2xl">
-            Next Spin Chance : {calculateNextSpin()}
-          </p>
-          <ConfettiComponent />
-        </>
-      )}
-      {informationIsOpen && (
-        <InformationModal
-          prize={prizeObj}
-          informationCloseHandler={informationCloseHandler}
+    <>
+      {isSpinning && prize.trim().length !== 0 && <ConfettiComponent />}
+      <div>
+        {spinList.length > 0}
+        <SpinAndWin
+          data={spinList}
+          result={prize}
+          fontSize={23}
+          horizantalText={false}
+          ref={buttonRef}
+          hideButton={true}
+          fontFamily="fantasy"
         />
-      )}
-    </div>
+        {!isSpinning && prize.trim().length === 0 ? (
+          <>
+            <button
+              className=" bg-white text-red-800 p-2 mt-6 rounded-lg shadow-lg text-md font-bold transition-all duration-300 ease-out"
+              onClick={spinHandler}
+              disabled={isSpinning}
+            >
+              SPIN
+            </button>
+          </>
+        ) : (
+          <>
+            <p className="mt-8 text-white font-extrabold text-2xl">
+              Next Spin Chance : {calculateNextSpin()}
+            </p>
+
+            {/* <ConfettiComponent /> */}
+          </>
+        )}
+        {informationIsOpen && (
+          <InformationModal
+            prize={prizeObj}
+            informationCloseHandler={informationCloseHandler}
+          />
+        )}
+      </div>
+    </>
   );
 };
 

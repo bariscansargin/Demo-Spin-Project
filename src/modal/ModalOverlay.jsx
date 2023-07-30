@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-
+//Components
+import ConfettiComponent from "../components/Confetti";
 //Gift Logo
 import photo from "../assets/logo.png";
 const ModalOverlay = ({ prize, closeHandler }) => {
   const [prizePhoto, setPrizePhoto] = useState(null);
-  
+
   useEffect(() => {
     if (prize.photo) {
       setPrizePhoto(prize.photo);
