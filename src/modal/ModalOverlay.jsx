@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 //Gift Logo
-import photo from "../assets/logo.png";
+import logo from "../assets/logo.png";
 const ModalOverlay = ({ prize, closeHandler }) => {
   const [prizePhoto, setPrizePhoto] = useState(null);
 
@@ -9,7 +9,7 @@ const ModalOverlay = ({ prize, closeHandler }) => {
     if (prize.photo) {
       setPrizePhoto(prize.photo);
     } else {
-      setPrizePhoto(photo);
+      setPrizePhoto(logo);
     }
   }, []);
   return (

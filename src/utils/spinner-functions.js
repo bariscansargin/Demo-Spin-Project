@@ -10,26 +10,22 @@ export function setList(prizes) {
 
 export function drawPrize(prizes) {
   const totalPossibility = prizes.reduce((total, prize) => {
-    total += prize.possibility;
-    return total;
+    return (total += prize.possibility);
   }, 0);
-  const roundedPossibility = Math.floor(totalPossibility);
- 
-  if (roundedPossibility !== 1) {
-    console.log(
-      "Total Possibility = " + totalPossibility,
-      "Rounded Possibility =" + roundedPossibility
-    );
-    throw new Error("Total possibility must be at 1.");
-  }
-  const randomNumber = Math.random();
-  let accumulatedPossibility = 0;
-  const shuffledArray = shuffleArray(prizes);
 
-  for (const prize of shuffledArray) {
-    accumulatedPossibility += prize.possibility / totalPossibility;
-    if (randomNumber < accumulatedPossibility) {
-      return prize;
+  if (totalPossibility !== 100) {
+    console.log("Total Possibility = " + totalPossibility);
+    throw new Error("Total possibility must be equal to 100.");
+  }
+
+  const chanceArr = [];
+  for (const prize of prizes) {
+    const numItemsToAdd = prize.possibility;
+    for (let i = 0; i < numItemsToAdd; i++) {
+      chanceArr.push(prize);
     }
   }
+  const chanceNumber = Math.floor(Math.random() * 100);
+  const shuffledArr = shuffleArray(chanceArr);
+  return shuffledArr[chanceNumber];
 }

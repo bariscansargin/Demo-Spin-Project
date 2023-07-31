@@ -12,7 +12,7 @@ const InformationModal = ({ prize, informationCloseHandler }) => {
   const [userPrize, setUserPrize] = useState(null);
 
   useEffect(() => {
-    if (prize.title === "Gift Check") {
+    if (prize.title === "Surprise") {
       const checkPrize = drawPrize(checkPrizes);
       setUserPrize(checkPrize);
     } else {
