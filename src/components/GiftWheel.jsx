@@ -69,7 +69,7 @@ const GiftWheel = () => {
         {!isSpinning && prize.trim().length === 0 ? (
           <>
             <button
-              className=" bg-white text-red-800 hover:scale-110 p-3 mt-12 min-[430px]:mt-6 rounded-lg shadow-lg text-md font-bold transition-all duration-300 ease-out"
+              className=" bg-white text-red-800 hover:scale-110 w-24 p-3 mt-12 min-[430px]:mt-6 rounded-lg shadow-lg text-md font-bold transition-all duration-300 ease-out"
               onClick={spinHandler}
               disabled={isSpinning}
             >

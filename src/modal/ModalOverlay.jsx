@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-
 //Gift Logo
 import logo from "../assets/logo.png";
+//Components
+import ConfettiComponent from "../components/Confetti";
 const ModalOverlay = ({ prize, closeHandler }) => {
   const [prizePhoto, setPrizePhoto] = useState(null);
 
@@ -15,6 +16,7 @@ const ModalOverlay = ({ prize, closeHandler }) => {
   return (
     <div className="fixed top-1/2 left-1/2 transform translate-x-[-50%] translate-y-[-50%] z-20 min-w-[80%] min-[600px]:min-w-[50%] rounded-2xl shadow-lg shadow-slate-500 flex flex-col">
       <header className="bg-slate-800 p-3">
+        <ConfettiComponent/>
         <h1 className="text-white text-3xl bold tracking-wide text-center">
           Congratulations
         </h1>
